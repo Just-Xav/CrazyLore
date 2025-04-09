@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!imageGallery) return;
 
   const entryId = document.body.dataset.entry;
+  console.log(entryId);
   if (!entryId) return;
 
-  const folder = `../assets/egg-7892/`;
+  const folder = `../assets/${entryId}/`;
 
-  const possibleImageNames = Array.from({ length: 10 }, (_, i) => `image${i + 1}`);
+  const possibleImageNames = Array.from({ length: 3 }, (_, i) => `image${i + 1}`);
   const extensions = ["jpg", "jpeg", "png", "webp", "gif"];
 
   possibleImageNames.forEach(name => {
